@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.tushar.entity.SearchStudent;
 import com.tushar.entity.Student;
@@ -57,13 +58,11 @@ public class MyController {
 	}
 	
 	@PostMapping("/addStudent")
-	public String NewStudentFormSubmission(Map<String, Object>map,@ModelAttribute Student student) {
+	public String NewStudentFormSubmission(RedirectAttributes attrs,@ModelAttribute Student student) {
 		System.out.println("MyController.NewStudentFormSubmission():"+student);
 		String resultMsg = service.registerStudent(student);
-		Iterable<Student> listStudents = service.getAllStudents();
-		map.put("resultMsg", resultMsg);
-		map.put("listStudents", listStudents);
-		return "allStudent";
+		attrs.addFlashAttribute("resultMsg", resultMsg);
+		return "redirect:allStudent";
 	}
 	
 	@GetMapping("/allStudent")
@@ -85,24 +84,20 @@ public class MyController {
 	}
 	
 	@PostMapping("/updateStudent")
-	public String updateStudentDetails(Map<String, Object>map, 
+	public String updateStudentDetails(RedirectAttributes attrs, 
 																			@ModelAttribute Student student) {
 		String msg= service.updateStudentDetails(student);
-		Iterable<Student> listStudents = service.getAllStudents();
-		map.put("resultMsg", msg);
-		map.put("listStudents", listStudents);
-		return "allStudent";
+		attrs.addFlashAttribute("resultMsg", msg);
+		return "redirect:allStudent";
 	}
 	
 	@GetMapping("/removeStudent")
-	public String removeStudent(Map<String, Object>map, 
+	public String removeStudent(RedirectAttributes attrs, 
 																					@RequestParam(name = "eid")Integer enrollId,
 																					@ModelAttribute Student student) {
 		String msg= service.removeStudentDetails(enrollId);
-		Iterable<Student> listStudents = service.getAllStudents();
-		map.put("resultMsg", msg);
-		map.put("listStudents", listStudents);
-		return "allStudent";
+		attrs.addFlashAttribute("resultMsg", msg);
+		return "redirect:allStudent";
 	}
 	
 	@GetMapping("/searchStudent")
