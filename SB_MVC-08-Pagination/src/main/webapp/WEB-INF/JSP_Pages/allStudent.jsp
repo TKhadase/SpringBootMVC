@@ -45,7 +45,8 @@
 						</tr>
 						<c:choose>
 						<c:when test="${!empty listStudents}">
-						<c:forEach var="stud" items="${listStudents.getContent()}">
+						<c:if test="${isFromSearchOrAll == 'All'}">
+						<c:forEach var="stud" items="${ listStudents.getContent() }">
 						<tr class="trlist">
 							<td><b><a  style="color:red;" href="updateStudent?eid=${stud.ENROLLID}"><u>&nbsp;${stud.ENROLLID}&nbsp;</u></a></b></td>
 							<td>${stud.fname}</td>
@@ -59,6 +60,23 @@
 								</a></td>
 						</tr>
 						</c:forEach>
+						</c:if>
+							<c:if test="${isFromSearchOrAll == 'Search'}">
+						<c:forEach var="stud" items="${ listStudents}">
+						<tr class="trlist">
+							<td><b><a  style="color:red;" href="updateStudent?eid=${stud.ENROLLID}"><u>&nbsp;${stud.ENROLLID}&nbsp;</u></a></b></td>
+							<td>${stud.fname}</td>
+							<td>${stud.mname}</td>
+							<td>${stud.lname}</td>
+							<td>${stud.currentStandard}</td>
+							<td>${stud.address2}</td>
+							<td>${stud.dob}</td>
+							<td><a href="removeStudent?eid=${stud.ENROLLID}" onclick="confirm('Are u sure want to delete ?')">
+									<i class="fa fa-trash" style="font-size: 25x; color: red"></i>
+								</a></td>
+						</tr>
+						</c:forEach>
+						</c:if>
 						</c:when>
 						<c:otherwise>
 							<tr class="trlist"><td colspan="8"  style="color:red;text-align:center;"><b>No records</b></td></tr>
@@ -72,6 +90,7 @@
 			<td width="10%"></td>
 		</table>
 		<p>
+		<c:if test="${isFromSearchOrAll == 'All'}">
 		<ul class="w3-pagination w3-border pagingbar" style="margin-left:25%;">
 			<c:if test="${!listStudents.isFirst() }">
 			<li><a href="allStudent?page=0">First</a></li>
@@ -92,6 +111,7 @@
 			<li><a href="allStudent?page=${listStudents.getTotalPages()-1}">Last</a></li>
 			</c:if>
 		</ul>
+		</c:if>
 		</p>
 	</div>
 

@@ -91,6 +91,7 @@ public class MyController {
 																@PageableDefault(page = 0, size = 5,sort = "ENROLLID", direction = Direction.ASC) Pageable pageable  ) {
 		Page<Student> listStudents = service.getAllStudentsByPage(pageable);
 		map.put("listStudents", listStudents);
+		map.put("isFromSearchOrAll", "All");
 		return "allStudent";
 	}
 	
@@ -147,6 +148,7 @@ public class MyController {
 		System.out.println("MyController.searchStudentDetails::"+student);
 		Iterable<Student> listStudents = service.searchStudentsByDetails(student);
 		map.put("listStudents", listStudents);
+		map.put("isFromSearchOrAll", "Search");
 		return "allStudent";
 	}
 	
