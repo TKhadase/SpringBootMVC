@@ -158,7 +158,7 @@
                                   <sform:options items="${classStandardInfo}"/>
                                  </sform:select>
                                  <sform:select path="currentSection" name="currentSection">
-                                    <option value="">Select Section</option>
+                                    <option value="${student.currentSection }">-${student.currentSection }-</option>
                                   <sform:options items="${sectionsDetails}"/>
                                  </sform:select>
                               </div>
