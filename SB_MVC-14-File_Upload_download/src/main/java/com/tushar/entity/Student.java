@@ -16,6 +16,7 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -57,7 +58,7 @@ public class Student implements Serializable {
 	
 	private LocalDate doj;
 	
-	private LocalDateTime regdt ;
+	private LocalDateTime regdt;
 
 	private String email;
 
@@ -73,7 +74,11 @@ public class Student implements Serializable {
 	private String newsletter;
 	
 	private String terms;
-
+	
+	private String photoPath;
+	
+	private String resumePath;
+	
 	@Override
 	public String toString() {
 		return "Student [ENROLLID=" + ENROLLID + ", ROLLID=" + ROLLID + ", fname=" + fname + ", mname=" + mname
@@ -81,7 +86,7 @@ public class Student implements Serializable {
 				+ currentStandard + ", currentSection=" + currentSection + ", mobile=" + mobile + ", dob=" + dob
 				+ ", birthtime=" + birthtime + ", doj=" + doj + ", regdt=" + regdt + ", email=" + email + ", passwrd="
 				+ passwrd + ", gender=" + gender + ", ISDELETED=" + ISDELETED + ", vflag=" + vflag + ", newsletter="
-				+ newsletter + ", terms=" + terms + "]";
+				+ newsletter + ", terms=" + terms + ", photoPath=" + photoPath + ", resumePath=" + resumePath + "]";
 	}
 
 }

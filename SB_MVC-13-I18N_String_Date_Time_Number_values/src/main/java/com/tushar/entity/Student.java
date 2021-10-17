@@ -57,7 +57,7 @@ public class Student implements Serializable {
 	
 	private LocalDate doj;
 	
-	private LocalDateTime regdt =LocalDateTime.now() ;
+	private LocalDateTime regdt;
 
 	private String email;
 
