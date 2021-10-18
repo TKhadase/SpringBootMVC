@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.Tushar</groupId>
-	<artifactId>SB_MVC-13-I18N_String_Date_Time_Number_values</artifactId>
+	<artifactId>SB_MVC-13-I18N_String_Date_Time_Number_values</artifactId> 
 	<version>1.0</version>
 	<packaging>war</packaging>
 	<name>SB_MVC-13-I18N_String_Date_Time_Number_values</name>
