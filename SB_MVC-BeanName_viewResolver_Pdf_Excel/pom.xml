@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.Tushar</groupId>
-	<artifactId>SB_MVC-BeanName_viewResolver_Pdf_Excel</artifactId>
+	<artifactId>SB_MVC-19-BeanName_viewResolver_Pdf_Excel</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
-	<name>SB_MVC-BeanName_viewResolver_Pdf_Excel</name>
+	<name>SB_MVC-19-BeanName_viewResolver_Pdf_Excel</name>
 	<description>Student CRUD</description>
 	<properties>
 		<java.version>1.8</java.version>
