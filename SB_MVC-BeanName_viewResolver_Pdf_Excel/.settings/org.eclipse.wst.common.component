@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+                                
+    
+    
+    
+    
+    
+    
+    <wb-module deploy-name="SB_MVC-19-BeanName_viewResolver_Pdf_Excel-1.0">
+                                                                
+        
+        
+        
+        
+        
+        
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+                                                                
+        
+        
+        
+        
+        
+        
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/"/>
+                                                                
+        
+        
+        
+        
+        
+        
+        <property name="java-output-path" value="/SB_MVC-15-InternalResource_ViewResolver/target/classes"/>
+                
+        <property name="context-root" value="SB_MVC-19-BeanName_viewResolver_Pdf_Excel"/>
+                                                            
+    
+    
+    
+    
+    
+    
+    </wb-module>
+                            
+
+
+
+
+
+
+</project-modules>
