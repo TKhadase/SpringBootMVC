@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="baseDef" template="/WEB-INF/JSP_Pages/layout.jsp">
+		<put-attribute name="headerContent"   value="/WEB-INF/JSP_Pages/header.jsp"/>
+		<put-attribute name="leftContent"   value="/WEB-INF/JSP_Pages/left.jsp"/>
+		<put-attribute name="bodyContent"    value=""/>
+		<put-attribute name="footerContent"    value="/WEB-INF/JSP_Pages/footer.jsp"/>
+	</definition>
+	
+	<definition name="allStudent"   extends="baseDef">
+		<put-attribute name="bodyContent"  value="/WEB-INF/JSP_Pages/allStudent.jsp" />
+	</definition>
+	
+	<definition name="home"   extends="baseDef">
+		<put-attribute name="bodyContent"  value="/WEB-INF/JSP_Pages/home.jsp" />
+	</definition>
+	
+	<definition name="Index"  template="/WEB-INF/JSP_Pages/layout.jsp" >
+		<put-attribute name="headerContent"   value=""/>
+		<put-attribute name="leftContent"   value=""/>
+		<put-attribute name="bodyContent"  value="/WEB-INF/JSP_Pages/Index.jsp" />
+		<put-attribute name="footerContent"    value=""/>
+	</definition>
+	
+	<definition name="searchStudent"   extends="baseDef">
+		<put-attribute name="bodyContent"  value="/WEB-INF/JSP_Pages/searchStudent.jsp" />
+	</definition>
+	
+	<definition name="signup"   template="/WEB-INF/JSP_Pages/layout.jsp">
+		<put-attribute name="headerContent"   value=""/>
+		<put-attribute name="leftContent"   value=""/>
+		<put-attribute name="bodyContent"  value="/WEB-INF/JSP_Pages/signup.jsp" />
+		<put-attribute name="footerContent"    value=""/>
+	</definition>
+	
+	<definition name="student_register"   extends="baseDef">
+		<put-attribute name="bodyContent"  value="/WEB-INF/JSP_Pages/student_register.jsp" />
+	</definition>
+	
+	<definition name="uploadStudentFiles"   extends="baseDef">
+		<put-attribute name="bodyContent"  value="/WEB-INF/JSP_Pages/uploadStudentFiles.jsp" />
+	</definition>
+
+</tiles-definitions>
