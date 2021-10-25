@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="Index" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/JSP_Pages/Index.jsp" />
+	</bean>
+
+	<bean id="allStudent" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" 	value="/WEB-INF/JSP_Pages/allStudent.jsp" />
+	</bean>
+
+	<bean id="footer" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/JSP_Pages/footer.jsp" />
+	</bean>
+
+	<bean id="header" 	class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/JSP_Pages/header.jsp" />
+	</bean>
+
+	<bean id="home" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/JSP_Pages/home.jsp" />
+	</bean>
+
+	<bean id="searchStudent" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/JSP_Pages/searchStudent.jsp" />
+	</bean>
+
+	<bean id="signup" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/JSP_Pages/signup.jsp" />
+	</bean>
+
+	<bean id="student_register" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/JSP_Pages/student_register.jsp" />
+	</bean>
+
+	<bean id="uploadStudentFiles" class="org.springframework.web.servlet.view.JstlView">
+		<property name="url" value="/WEB-INF/JSP_Pages/uploadStudentFiles.jsp" />
+	</bean>
+
+</beans>

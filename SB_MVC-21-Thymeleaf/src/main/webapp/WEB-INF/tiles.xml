@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="baseDef" template="/WEB-INF/TilesLayout.jsp">
+		<put-attribute name="headerContent"   value="/header.html"/>
+		<put-attribute name="leftContent"   value="/left.html"/>
+		<put-attribute name="bodyContent"    value=""/>
+		<put-attribute name="footerContent"    value="/footer.html"/>
+	</definition>
+	
+	<definition name="allStudent"   extends="baseDef">
+		<put-attribute name="bodyContent"  value="/allStudent.html" />
+	</definition>
+	
+	<definition name="home"   extends="baseDef">
+		<put-attribute name="bodyContent"  value="/home.html" />
+	</definition>
+	
+	<definition name="Index"  template="/layout.html" >
+		<put-attribute name="headerContent"   value=""/>
+		<put-attribute name="leftContent"   value=""/>
+		<put-attribute name="bodyContent"  value="/Index.html" />
+		<put-attribute name="footerContent"    value=""/>
+	</definition>
+	
+	<definition name="searchStudent"   extends="baseDef">
+		<put-attribute name="bodyContent"  value="/searchStudent.html" />
+	</definition>
+	
+	<definition name="signup"   template="/layout.html">
+		<put-attribute name="headerContent"   value=""/>
+		<put-attribute name="leftContent"   value=""/>
+		<put-attribute name="bodyContent"  value="/signup.html" />
+		<put-attribute name="footerContent"    value=""/>
+	</definition>
+	
+	<definition name="student_register"   extends="baseDef">
+		<put-attribute name="bodyContent"  value="/student_register.html" />
+	</definition>
+	
+	<definition name="uploadStudentFiles"   extends="baseDef">
+		<put-attribute name="bodyContent"  value="/uploadStudentFiles.html" />
+	</definition>
+
+</tiles-definitions>
